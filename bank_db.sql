@@ -1,14 +1,18 @@
+-- Drop and Create the Database, DDL
+
 drop database if exists bank_db;
 create database bank_db;
 use bank_db;
 
+-- Create the account table, DDL
 create table account (
-	id 				int 			not null primary key auto_increment,
-	accountHolder 	varchar(50) 	not null,
-	balance 		int 			not null,
-	fees 			int 			not null
+	id 				int 				not null primary key auto_increment,
+	accountHolder 	varchar(50) 		not null,
+	balance 		decimal(6,2) 		not null,
+	fees 			decimal(6,2)		not null
     );
 
+-- Insert Data into the account table, DML
 Insert into account (accountHolder, balance, fees)
 values ('Karlee Abrams', '8888', '20');
 Insert into account (accountHolder, balance, fees)
@@ -19,21 +23,23 @@ Insert into account (accountHolder, balance, fees)
 values ('Justin Snyder', '3322', '88');
 
 
-
+-- Create the transaction table, DDL
 create table transaction (
 	id 				int 			not null primary key auto_increment,
-	amount 			int 			not null,
+	amount 			decimal(6.2) 	not null,
 	txn_type		varchar(20)		not null,
-	account_id 		int 			
+	account_id 		int 			not null
 );
-
+-- create the foregin key, DDL
 ALTER TABLE transaction
 ADD FOREIGN KEY (account_id) REFERENCES account(id);
-Insert into transaction (amount, txn_type)
-values ('500', 'Deposit');
-Insert into transaction (amount, txn_type)
-values ('-200', 'Withdrawal');
-Insert into transaction (amount, txn_type)
-values ('200', 'Deposit');
-Insert into transaction (amount, txn_type)
-values ('248', 'Deposit');
+
+--insert data in to the account table, DML
+Insert into transaction (amount, txn_type, account_id)
+values ('500', 'Deposit', '3');
+Insert into transaction (amount, txn_type, account_id)
+values ('-200', 'Withdrawal', '4');
+Insert into transaction (amount, txn_type, account_id)
+values ('200', 'Deposit', '4');
+Insert into transaction (amount, txn_type, account_id)
+values ('248', 'Deposit', '1');
