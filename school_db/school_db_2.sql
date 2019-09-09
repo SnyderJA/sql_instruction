@@ -1,8 +1,8 @@
 -- Drop and Create the Database, DDL
 
-drop database if exists school_db;
-create database school_db;
-use school_db;
+drop database if exists school_db_2;
+create database school_db_2;
+use school_db_2;
 
 -- DDL - Create Tables
 create table student (
@@ -28,8 +28,7 @@ create table course (
 	credits 		int 			not null,
 	quarter 		int 			not null
 	);
-
-
+s
 create table enrolled (
 	id 				int 			not null primary key auto_increment,
 	studentID		int 			not null,
