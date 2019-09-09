@@ -54,5 +54,11 @@ Select distinct subject,
     on c.id = e.courseID
     group by subject
     order by Count(*) Desc;
+
+-- Using delete to remove students from the students table 
+Delete from student 
+    where Id > 45; 
+
+
     
     
