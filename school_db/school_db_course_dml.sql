@@ -10,9 +10,9 @@ insert into course (id, subject, name, credits, quarter)
 insert into course (id, subject, name, credits, quarter)
 	values (1003, 'english', 'en102', 4, 3); 
 insert into course (id, subject, name, credits, quarter)
-	values (1004, 'civis', 'cv101', 4, 4); 
+	values (1004, 'civics', 'cv101', 4, 4); 
 insert into course (id, subject, name, credits, quarter)
-	values (1005, 'civis', 'cv102', 4, 1); 
+	values (1005, 'civics', 'cv102', 4, 1); 
 insert into course (id, subject, name, credits, quarter)
 	values (1006, 'socialStudies', 'ss101', 4, 2); 
 insert into course (id, subject, name, credits, quarter)
