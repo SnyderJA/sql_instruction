@@ -24,7 +24,7 @@ Select *
     inner join course c
     on c.id = e.courseid;
 
--- Inner join on Student and enrolled tables
+-- Inner join on student and enrolled tables
 Select firstName, lastName, courseID, grade
 	from student s
     inner join  enrolled e
