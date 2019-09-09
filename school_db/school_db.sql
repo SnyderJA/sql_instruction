@@ -32,8 +32,8 @@ create table course (
 
 create table enrolled (
 	id 				int 			not null primary key auto_increment,
-	studentID		int 			not null unique,
-	courseID		int 			not null unique,
+	studentID		int 			not null,
+	courseID		int 			not null,
 	grade			varchar(1),
 	FOREIGN KEY (studentID) REFERENCES student(id),
 	FOREIGN KEY (courseID) REFERENCES course(id)
