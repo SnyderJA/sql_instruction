@@ -36,8 +36,9 @@ create table enrolled (
 	courseID		int 			not null,
 	grade			varchar(1),
 	FOREIGN KEY (studentID) REFERENCES student(id),
-	FOREIGN KEY (courseID) REFERENCES course(id)
-    );
+	FOREIGN KEY (courseID) REFERENCES course(id),
+	CONSTRAINT ST_course unique (studentID, courseID)
+);
     
 -- DML Insert Student Data
 
